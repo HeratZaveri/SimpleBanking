@@ -1,0 +1,42 @@
+<!DOCTYPE HTML><meta charset="utf-8">
+<style> #amount {border: 2px solid red; width: 50%; padding: 10px; }</style>
+<style> #amount {display: none;} </style>
+<body bgcolor = "#33CCFF">
+
+<form action = "main.php">
+<h1>Online Banking Portal</h1>
+Enter ucid                   
+<br><input type = text name = "ucid" placeholder = "Required" autocomplete = "off"> <br>
+<br>Enter password<br>          
+<input type = text name = "p" placeholder = "Required" autocomplete = "off"  > <br>
+<br>Enter account<br>          
+<input type = text name = "account"><br><br>
+
+<div id="amount">
+<br>Enter transaction amount <input type = text name = "amount"><br><br>
+</div>
+
+<br>
+
+<select id="choice" name="choice">
+  <option value=""   >       Choose   </option>
+  <option value="see" >      See      </option>
+  <option value="transact" > Transact </option>
+</select>
+
+<br><br><input type = submit >
+
+</form>
+
+<script>
+
+  var ptrAmnt = document.getElementById("amount")
+  var ptrChoice = document.getElementById("choice")
+    ptrChoice.addEventListener('change', H)
+  
+  function H(){
+      if(ptrChoice.value != "transact"){ptrAmnt.style.display = "none" }
+      else {ptrAmnt.style.display = "block"}
+  }
+  
+</script>
