@@ -2,7 +2,8 @@
 print "Hello";
 
 //connect database
-include("account.php") ;
+//include("account.php") ;
+include("account_sample.php") ;
 include("myFunctions.php") ;
 
 
